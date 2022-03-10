@@ -65,10 +65,8 @@ spec:
         crane transfer-pvc \
           --source-context=$(params.source-context) \
           --destination-context=$(params.dest-context) \
-          --pvc-name $(params.source-pvc-name):$(params.dest-pvc-name) \
-          --pvc-namespace $(params.source-namespace):$(params.dest-namespace) \
-          --dest-pvc-storage-class-name $(params.dest-storage-class-name) \
-          --pvc-requests-storage $(params.dest-pvc-capacity) \
+          --pvc-name $(params.source-pvc-name) \
+          --pvc-namespace $(params.source-namespace) \
           --endpoint $(params.endpoint-type)
       env:
         - name: KUBECONFIG
